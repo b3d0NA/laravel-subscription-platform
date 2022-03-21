@@ -27,7 +27,7 @@ class SendEmailToSubscriber implements ShouldQueue
      */
     public function handle(SendEmail $event)
     {
-        $subscribers = $event->post->websites->subscribers->pluck("email");
+        $subscribers = $event->post->website->subscribers()?->pluck("email");
         foreach ($subscribers as $subscriber) {
             Mail::to($subscriber)->send(new PostEmail($event->post));
         }

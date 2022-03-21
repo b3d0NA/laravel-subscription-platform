@@ -30,6 +30,6 @@ class PostEmail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.post-email');
+        return $this->subject($this->post->website->name . " posted a new thread")->markdown('mail.post-email');
     }
 }

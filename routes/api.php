@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
+Route::get('/', [PostController::class, "index"])->name("posts.index");
 Route::post("posts", [PostController::class, "store"])->name("posts.store");
 
 Route::get('posts/{post:id}', [PostController::class, "view"])->name("posts.view");
@@ -24,4 +25,3 @@ Route::get('websites', [WebsiteController::class, "create"])->name("website.crea
 Route::post('websites', [WebsiteController::class, "store"])->name("website.store");
 
 Route::post("subscribe/{website:id}", [SubscriptionController::class, "store"])->name("subs.store");
-Route::get('/', [PostController::class, "index"])->name("posts.index");
