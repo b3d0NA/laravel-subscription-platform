@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+    protected $fillabel = ["title", "description"];
+
+    public function website()
+    {
+        return $this->belongsTo(Website::class);
+    }
 }

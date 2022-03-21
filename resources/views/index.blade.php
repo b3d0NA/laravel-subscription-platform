@@ -15,4 +15,9 @@
         <a class="nav-link disabled">Disabled</a>
     </li>
 </ul>
+
+
+<form action="">
+
+</form>
 @endsection
