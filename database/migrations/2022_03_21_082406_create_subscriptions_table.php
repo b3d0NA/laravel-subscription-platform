@@ -17,6 +17,7 @@ class CreateSubscriptionsTable extends Migration
             $table->id();
             $table->integer("subscribeable_id");
             $table->string("subscribeable_type");
+            $table->string("email");
             $table->timestamps();
         });
     }

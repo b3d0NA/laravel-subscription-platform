@@ -10,6 +10,8 @@
 
 <body>
 
+    @include("layouts.header")
+
     @yield("content")
 
 

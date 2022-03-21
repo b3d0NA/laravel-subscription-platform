@@ -9,7 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillabel = ["title", "description"];
+    protected $fillable = ["title", "description"];
+    protected $with = "website";
 
     public function website()
     {

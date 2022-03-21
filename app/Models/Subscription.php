@@ -9,6 +9,8 @@ class Subscription extends Model
 {
     use HasFactory;
 
+    protected $fillable = ["email"];
+
     public function subscribeable()
     {
         return $this->morphTo();
